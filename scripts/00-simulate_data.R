@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Simulates Car theft trend based on time dimension(hour)
 # Author: JIEFENG LI
-# Date: 21 September 2024 [...UPDATE THIS...]
+# Date: 21 September 2024 
 # Contact: jiefeng.li@mail.utoronto.ca
 # License: MIT
 
