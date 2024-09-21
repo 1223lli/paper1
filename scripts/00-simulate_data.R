@@ -19,19 +19,20 @@ start_date <- as.Date("2014-01-01")
 end_date <- as.Date("2024-06-30")
 
 
-OCC_HOUR <- 100
+number_of_Theft_from_Motor_Vehicle <- 100
 
 data <-
   tibble(
     dates = as.Date(
       runif(
-        n = OCC_HOUR,
+        n = number_of_Theft_from_Motor_Vehicle,
         min = as.numeric(start_date),
         max = as.numeric(end_date)
       ),
       origin = "1970-01-01"
     ),
-    number_of_Theft_from_Motor_Vehicle = rpois(n = OCC_HOUR, lambda = 15)
+    OCC_HOUR = sample(0:23, size = number_of_Theft_from_Motor_Vehicle, replace = TRUE),
+    HOOD_158 = sample(0:174, size = number_of_Theft_from_Motor_Vehicle, replace = TRUE)
   )
 
 write_csv(data, file = "data/raw_data/simulated.csv")
